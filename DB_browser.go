@@ -7,7 +7,7 @@
  * You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
- *     
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,7 +17,7 @@
 
 package surferua
 
-func init () {
+func init() {
 	browserDBSize = 3
 	browserDB = []BrowserInfo{
 		{
@@ -71,22 +71,20 @@ func init () {
 	}
 }
 
-
 // Firefox returns Specified browser: Firefox
-func (ua *UserAgent) Firefox () *UserAgent {
+func (ua *UserAgent) Firefox() *UserAgent {
 	ua.browser = browserDB[0].Random()
 	return ua
 }
 
 // Chrome returns Specified browser: Chrome
-func (ua *UserAgent) Chrome () *UserAgent {
+func (ua *UserAgent) Chrome() *UserAgent {
 	ua.browser = browserDB[1].Random()
 	return ua
 }
 
 // Safari returns Specified browser: Safari
-func (ua *UserAgent) Safari () *UserAgent {
+func (ua *UserAgent) Safari() *UserAgent {
 	ua.browser = browserDB[2].Random()
 	return ua
 }
-

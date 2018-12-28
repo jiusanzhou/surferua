@@ -7,7 +7,7 @@
  * You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
- *     
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,12 +21,12 @@ import (
 	"math/rand"
 )
 
-func init () {
+func init() {
 	platformTypeSize = 1
 	// [Phone]
-	platformSize = []int{ 2, }
-	platformDB = [][]PlatformInfo{ 
-		{ 
+	platformSize = []int{2}
+	platformDB = [][]PlatformInfo{
+		{
 			{
 				Name: "iOS",
 				VersionInfo: VersionInfo{
@@ -47,26 +47,22 @@ func init () {
 	}
 }
 
-
 // Phone returns UA with type: Phone
-func (ua *UserAgent) Phone () (*UserAgent) {
+func (ua *UserAgent) Phone() *UserAgent {
 	ua.platform = platformDB[0][rand.Intn(platformSize[0])].Random()
 	return ua
 }
 
-
-
 //
 // IOS returns UA with target: iOS
-func (ua *UserAgent) IOS () (*UserAgent) {
+func (ua *UserAgent) IOS() *UserAgent {
 	ua.platform = platformDB[0][0].Random()
 	return ua
 }
+
 //
 // Android returns UA with target: Android
-func (ua *UserAgent) Android () (*UserAgent) {
+func (ua *UserAgent) Android() *UserAgent {
 	ua.platform = platformDB[0][1].Random()
 	return ua
 }
-
-

@@ -7,7 +7,7 @@
  * You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
- *     
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,9 +17,9 @@
 
 package surferua
 
-func init () {
+func init() {
 	botDBSize = 16
-	botDB = []string {
+	botDB = []string{
 		"Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
 		"DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)",
 		"Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)",
@@ -38,7 +38,6 @@ func init () {
 		"SimplePie/1.3.1 (Feed Parser; http://simplepie.org; Allow like Gecko)",
 	}
 }
-
 
 // NewBotYandex returns full user-agent string of yandex.
 func NewBotYandex() string {
@@ -119,4 +118,3 @@ func NewBotBaidu() string {
 func NewBotExa() string {
 	return "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)"
 }
-
