@@ -1,8 +1,8 @@
 package surferua
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestRandStringBytesMaskImprSrc(t *testing.T) {

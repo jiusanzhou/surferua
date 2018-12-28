@@ -5,6 +5,7 @@ import "strings"
 var browserDBSize = 0
 var browserDB []BrowserInfo
 
+// Browser is br
 type Browser struct {
 	// The name of the browser.
 	Name string
@@ -35,7 +36,7 @@ type BrowserInfo struct {
 	VersionInfo VersionInfo
 }
 
-func (bi *BrowserInfo) Random() (*Browser) {
+func (bi *BrowserInfo) Random() *Browser {
 	return &Browser{Name: bi.Name, Engine: *bi.EngineInfo.Random(), Semver: *bi.VersionInfo.Random()}
 }
 

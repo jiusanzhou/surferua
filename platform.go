@@ -1,10 +1,8 @@
 package surferua
 
-
 var platformTypeSize int
 var platformSize []int
 var platformDB [][]PlatformInfo
-
 
 // TODO: use tpl
 // _tpl: "{{.MozillaWithVersion}} (iPhone; CPU iPhone OS {{.Version.Major}}_{{.Version.Minor}}_{{.Version.Patch}} like Mac OS X) {{.BrowserS}} {{.Comment}}"
@@ -58,22 +56,22 @@ type PlatformInfo struct {
 	// store phone or pc?
 }
 
-func (p *PlatformInfo) Random() (*Platform) {
+func (p *PlatformInfo) Random() *Platform {
 	return &Platform{Name: p.Name, Semver: *p.VersionInfo.Random(), Comment: p.Comment}
 }
 
-func NewPlatformInfo(name string, m interface{}) (pi *PlatformInfo){
+func NewPlatformInfo(name string, m interface{}) (pi *PlatformInfo) {
 	if mMap, ok := m.(map[interface{}]interface{}); ok {
 		pi = &PlatformInfo{
-			Name: name,
-			VersionInfo:NewVersionInfo(mMap["version"]),
+			Name:        name,
+			VersionInfo: NewVersionInfo(mMap["version"]),
 			// Comment: ...
 		}
 	}
 	return
 }
 
-func NewPlatformInfoList(m map[interface{}]interface{}) (types []string, l [][]*PlatformInfo){
+func NewPlatformInfoList(m map[interface{}]interface{}) (types []string, l [][]*PlatformInfo) {
 	for type0, mMap := range m {
 		subList := []*PlatformInfo{}
 		if mmMap, ok := mMap.(map[interface{}]interface{}); ok {
@@ -86,7 +84,7 @@ func NewPlatformInfoList(m map[interface{}]interface{}) (types []string, l [][]*
 		}
 
 		// append sub list to the father list
-		if len(subList)>0{
+		if len(subList) > 0 {
 			l = append(l, subList)
 			types = append(types, type0.(string))
 		}

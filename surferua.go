@@ -2,9 +2,11 @@ package surferua
 
 import (
 	"math/rand"
-	"time"
 	"strings"
+	"time"
 )
+
+//go:generate go run gen/gen-db.go gen/data.yml
 
 func init() {
 	Seed(time.Now().UnixNano())
@@ -19,13 +21,13 @@ const MozillaWithVersion = "Mozilla/5.0"
 
 type UserAgent struct {
 	// Common version: 5.0
-	Version string
+	version string
 
 	// Browser information
-	Browser *Browser
+	browser *Browser
 
 	// Platform information
-	Platform *Platform
+	platform *Platform
 }
 
 func (ua *UserAgent) String() (us string) {
@@ -33,16 +35,16 @@ func (ua *UserAgent) String() (us string) {
 	// firefox has different tpl
 	// 1. use `.` to connect semver instead of `_`
 	// 2. ends with `rv:`
-	if strings.Contains(ua.Browser.Name, "irefox") {
-		return ua.Version + " (" + strings.Replace(ua.Platform.String(), "_", ".", -1) + "; rv:" + ua.Browser.Semver.String() + ") " + ua.Browser.String()
+	if strings.Contains(ua.browser.Name, "irefox") {
+		return ua.version + " (" + strings.Replace(ua.platform.String(), "_", ".", -1) + "; rv:" + ua.browser.Semver.String() + ") " + ua.browser.String()
 	}
-	return ua.Version + " (" + ua.Platform.String() +  ") " + ua.Browser.String()
+	return ua.version + " (" + ua.platform.String() + ") " + ua.browser.String()
 }
 
-func New() (ua *UserAgent) {
+func New(keys ...string) (ua *UserAgent) {
 
 	ua = &UserAgent{
-		Version: MozillaWithVersion,
+		version: MozillaWithVersion,
 	}
 
 	// if we need specific platform or browser
@@ -52,13 +54,13 @@ func New() (ua *UserAgent) {
 	// random platform with version
 
 	// random browser with version
-	if ua.Browser == nil {
-		ua.Browser = browserDB[rand.Intn(browserDBSize)].Random()
+	if ua.browser == nil {
+		ua.browser = browserDB[rand.Intn(browserDBSize)].Random()
 	}
 
-	if ua.Platform == nil {
+	if ua.platform == nil {
 		x := rand.Intn(platformTypeSize)
-		ua.Platform = platformDB[x][rand.Intn(platformSize[x])].Random()
+		ua.platform = platformDB[x][rand.Intn(platformSize[x])].Random()
 	}
 
 	return

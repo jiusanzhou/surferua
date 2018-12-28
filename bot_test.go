@@ -1,8 +1,8 @@
 package surferua
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestNewBot(t *testing.T) {

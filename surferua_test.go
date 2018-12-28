@@ -1,8 +1,8 @@
 package surferua
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestNew(t *testing.T) {
@@ -11,4 +11,5 @@ func TestNew(t *testing.T) {
 	fmt.Println(New().String())
 	fmt.Println(New().Phone().String())
 	fmt.Println(New().String())
+	fmt.Println(New().IOS().String())
 }

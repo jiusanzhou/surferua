@@ -34,7 +34,7 @@ func (ei *EngineInfo) Random() (e *Engine) {
 func NewEngineInfo(m interface{}) (ei EngineInfo) {
 	if mMap, ok := m.(map[interface{}]interface{}); ok {
 		if name, ok := mMap["name"].(string); ok {
-			return EngineInfo{Name: name, VersionInfo:NewVersionInfo(mMap["version"])}
+			return EngineInfo{Name: name, VersionInfo: NewVersionInfo(mMap["version"])}
 		}
 	}
 	return

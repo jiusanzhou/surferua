@@ -8,7 +8,7 @@ import (
 var botDBSize = 0
 var botDB = []string{}
 
-// Crawler and bot UA strings
+// Bot Crawler  UA strings
 type Bot struct {
 	// The name of bot
 	Name string
@@ -17,15 +17,16 @@ type Bot struct {
 	Version string
 
 	// The url of bot
-	Url string
+	URL string
 }
 
+// String generate strings of UserAgent
 func (b *Bot) String() (s string) {
-	return b.Name + "/" + b.Version + " (+" + b.Url + ")"
+	return b.Name + "/" + b.Version + " (+" + b.URL + ")"
 }
 
-func NewBot() (string) {
-
+// NewBot returns a bot ua randomly
+func NewBot() string {
 	return botDB[rand.Intn(botDBSize)]
 }
 

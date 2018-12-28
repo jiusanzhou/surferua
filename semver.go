@@ -22,7 +22,7 @@ type PreRelease string
 
 func (s *Semver) String(seps ...string) string {
 	var sep = "."
-	if len(seps)>=1{
+	if len(seps) >= 1 {
 		sep = seps[0]
 	}
 	// default use '.' as sep
@@ -62,7 +62,7 @@ func randomRange(start, end int) int {
 }
 
 func mustInt(v interface{}) int {
-	switch value:=v.(type) {
+	switch value := v.(type) {
 	case int:
 		return value
 	case int64:
