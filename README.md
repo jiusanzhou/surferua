@@ -7,7 +7,7 @@
 <h3 align="center">Surfer UA</h3>
 <p align="center">High performance User-Agent generator in Golang.</p>
 <p align="center">
-    <a href="https://travis-ci.org/jiusanzhou/surferua"><img src="https://img.shields.io/travis/jiusanzhou/surferua.svg?label=linux+build"></a>
+    <a href="https://travis-ci.org/jiusanzhou/surferua"><img src="https://img.shields.io/travis/jiusanzhou/surferua.svg?label=build"></a>
 	<a href="https://godoc.org/github.com/jiusanzhou/surferua"><img src="https://img.shields.io/badge/godoc-reference-blue.svg"></a>
 	<a href="https://goreportcard.com/report/jiusanzhou/surferua"><img src="https://goreportcard.com/badge/github.com/jiusanzhou/surferua"></a>
 	<a href="https://twitter.com/jiusanzhou" title="@Zoe on Twitter"><img src="https://img.shields.io/badge/twitter-@jiusanzhou-55acee.svg" alt="@Zoe on Twitter"></a>
@@ -57,7 +57,7 @@ fmt.Println(surferua.New().Desktop().Firefox().String())
 ```yaml
 # You can get all User-Agent from: http://www.webapps-online.com/online-tools/user-agent-strings
 # If you want to add UA of some version or change them,
-# you just need to edit this file and generate code with `go run gen/gen-db.go` again.
+# you just need to edit this file and generate code with `go generate` again.
 browsers:
   Firefox:
     engine:
@@ -126,4 +126,5 @@ bots: # Auto upper the first letter
 
 ## TODO
 
+- [ ] Add functional way to create UA factory
 - [ ] Add testing
