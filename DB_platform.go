@@ -7,7 +7,7 @@
  * You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ *     
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,20 +21,39 @@ import (
 	"math/rand"
 )
 
-func init() {
-	platformTypeSize = 1
-	// [Phone]
-	platformSize = []int{2}
-	platformDB = [][]PlatformInfo{
-		{
+func init () {
+	platformTypeSize = 2
+	// [Desktop Phone]
+	platformSize = []int{ 3, 2, }
+	platformDB = [][]PlatformInfo{ 
+		{ 
 			{
-				Name: "iOS",
+				Name: "Linux",
 				VersionInfo: VersionInfo{
-					Major: Endpoint{Start: 6, End: 11},
+					Major: Endpoint{Start: 3, End: 5},
 					Minor: Endpoint{Start: 0, End: 3},
 					Patch: Endpoint{Start: 0, End: 3},
 				},
 			},
+			{
+				Name: "MacOS",
+				VersionInfo: VersionInfo{
+					Major: Endpoint{Start: 8, End: 10},
+					Minor: Endpoint{Start: 0, End: 3},
+					Patch: Endpoint{Start: 0, End: 3},
+				},
+			},
+			{
+				Name: "Windows",
+				VersionInfo: VersionInfo{
+					Major: Endpoint{Start: 7, End: 10},
+					Minor: Endpoint{Start: 0, End: 3},
+					Patch: Endpoint{Start: 0, End: 3},
+				},
+			},
+		},
+	
+		{ 
 			{
 				Name: "Android",
 				VersionInfo: VersionInfo{
@@ -43,26 +62,64 @@ func init() {
 					Patch: Endpoint{Start: 0, End: 4},
 				},
 			},
+			{
+				Name: "iOS",
+				VersionInfo: VersionInfo{
+					Major: Endpoint{Start: 6, End: 11},
+					Minor: Endpoint{Start: 0, End: 3},
+					Patch: Endpoint{Start: 0, End: 3},
+				},
+			},
 		},
 	}
 }
 
-// Phone returns UA with type: Phone
-func (ua *UserAgent) Phone() *UserAgent {
+
+// Desktop returns UA with type: Desktop
+func (ua *UserAgent) Desktop () (*UserAgent) {
 	ua.platform = platformDB[0][rand.Intn(platformSize[0])].Random()
 	return ua
 }
 
-//
-// IOS returns UA with target: iOS
-func (ua *UserAgent) IOS() *UserAgent {
-	ua.platform = platformDB[0][0].Random()
+// Phone returns UA with type: Phone
+func (ua *UserAgent) Phone () (*UserAgent) {
+	ua.platform = platformDB[1][rand.Intn(platformSize[1])].Random()
 	return ua
 }
 
+
+
 //
-// Android returns UA with target: Android
-func (ua *UserAgent) Android() *UserAgent {
+// Linux returns UA with target: Linux
+func (ua *UserAgent) Linux () (*UserAgent) {
+	ua.platform = platformDB[0][0].Random()
+	return ua
+}
+//
+// MacOS returns UA with target: MacOS
+func (ua *UserAgent) MacOS () (*UserAgent) {
 	ua.platform = platformDB[0][1].Random()
 	return ua
 }
+//
+// Windows returns UA with target: Windows
+func (ua *UserAgent) Windows () (*UserAgent) {
+	ua.platform = platformDB[0][2].Random()
+	return ua
+}
+
+
+//
+// Android returns UA with target: Android
+func (ua *UserAgent) Android () (*UserAgent) {
+	ua.platform = platformDB[1][0].Random()
+	return ua
+}
+//
+// IOS returns UA with target: iOS
+func (ua *UserAgent) IOS () (*UserAgent) {
+	ua.platform = platformDB[1][1].Random()
+	return ua
+}
+
+

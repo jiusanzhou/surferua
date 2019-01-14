@@ -19,4 +19,4 @@ Package surferua is a lightweight and high performance Golang package that gener
 
 For a full guide visit https://github.com/jiusanzhou/surferua
 */
-package surferua // import "go.zoe.im"
+package surferua // import "go.zoe.im/surferua"

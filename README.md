@@ -35,18 +35,22 @@ Some example code below:
 package main
 
 import (
-    "go.zoe.im/surferua"
+	"go.zoe.im/surferua"
+
+	"fmt"
 )
 
-fmt.Println(surferua.New().String())
+func main() {
+	fmt.Println(surferua.New().String())
 
-// functions depends on your generated inputting data.
+	// functions depends on your generated inputting data.
 
-fmt.Println(surferua.NewBot.String())
-fmt.Println(surferua.NewBotGoogle.String())
-fmt.Println(surferua.New().Phone().String())
-fmt.Println(surferua.New().Android().String())
-fmt.Println(surferua.New().Desktop().Firefox().String())
+	fmt.Println(surferua.NewBot())
+	fmt.Println(surferua.NewBotGoogle())
+	fmt.Println(surferua.New().Phone().String())
+	fmt.Println(surferua.New().Android().String())
+	fmt.Println(surferua.New().Desktop().Chrome().String())
+}
 ```
 
 ### Add more UA

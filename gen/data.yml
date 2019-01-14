@@ -33,8 +33,20 @@ browsers:
 platforms:
   Desktop:
     Linux:
+      version:
+        major: [3, 5]
+        minor: [0, 3]
+        patch: [0, 3]
     MacOS:
+      version:
+        major: [8, 10]
+        minor: [0, 3]
+        patch: [0, 3]
     Windows:
+      version:
+        major: [7, 10]
+        minor: [0, 3]
+        patch: [0, 3]
   Phone:
     iOS:
       version:

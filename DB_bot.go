@@ -7,7 +7,7 @@
  * You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ *     
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,104 +17,90 @@
 
 package surferua
 
-func init() {
+func init () {
 	botDBSize = 16
-	botDB = []string{
-		"Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
-		"DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)",
+	botDB = []string {
+		"Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+		"Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)",
 		"Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)",
+		"Sogou Orion spider/3.0( http://www.sogou.com/docs/help/webmasters.htm#07)",
+		"ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)",
 		"Mozilla/5.0 (compatible; MJ12bot/v1.4.5; http://www.majestic12.co.uk/bot.php)",
 		"Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)",
-		"Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)",
-		"msnbot/2.0b (+http://search.msn.com/msnbot.htm)",
 		"Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
-		"Mozilla/5.0 (compatible; ScoutJet; +http://www.scoutjet.com/)",
+		"DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)",
 		"Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)",
-		"Sogou Orion spider/3.0( http://www.sogou.com/docs/help/webmasters.htm#07)",
-		"facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
-		"ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)",
 		"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-		"Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+		"Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
 		"SimplePie/1.3.1 (Feed Parser; http://simplepie.org; Allow like Gecko)",
+		"msnbot/2.0b (+http://search.msn.com/msnbot.htm)",
+		"Mozilla/5.0 (compatible; ScoutJet; +http://www.scoutjet.com/)",
+		"facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
 	}
-}
-
-// NewBotYandex returns full user-agent string of yandex.
-func NewBotYandex() string {
-	return "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)"
-}
-
-// NewBotScoutJet returns full user-agent string of scoutJet.
-func NewBotScoutJet() string {
-	return "Mozilla/5.0 (compatible; ScoutJet; +http://www.scoutjet.com/)"
-}
-
-// NewBotSogou returns full user-agent string of sogou.
-func NewBotSogou() string {
-	return "Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)"
-}
-
-// NewBotMsn returns full user-agent string of msn.
-func NewBotMsn() string {
-	return "msnbot/2.0b (+http://search.msn.com/msnbot.htm)"
-}
-
-// NewBotGoogle returns full user-agent string of google.
-func NewBotGoogle() string {
-	return "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-}
-
-// NewBotBing returns full user-agent string of bing.
-func NewBotBing() string {
-	return "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
-}
-
-// NewBotSimplePie returns full user-agent string of simplePie.
-func NewBotSimplePie() string {
-	return "SimplePie/1.3.1 (Feed Parser; http://simplepie.org; Allow like Gecko)"
-}
-
-// NewBotSogouOrin returns full user-agent string of sogouOrin.
-func NewBotSogouOrin() string {
-	return "Sogou Orion spider/3.0( http://www.sogou.com/docs/help/webmasters.htm#07)"
-}
-
-// NewBotFacebook returns full user-agent string of facebook.
-func NewBotFacebook() string {
-	return "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"
-}
-
-// NewBotAlexa returns full user-agent string of alexa.
-func NewBotAlexa() string {
-	return "ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)"
-}
-
-// NewBotYahoo returns full user-agent string of yahoo.
-func NewBotYahoo() string {
-	return "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)"
 }
 
 // NewBotDuck returns full user-agent string of duck.
 func NewBotDuck() string {
 	return "DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)"
 }
-
+// NewBotSogou returns full user-agent string of sogou.
+func NewBotSogou() string {
+	return "Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)"
+}
+// NewBotSogouOrin returns full user-agent string of sogouOrin.
+func NewBotSogouOrin() string {
+	return "Sogou Orion spider/3.0( http://www.sogou.com/docs/help/webmasters.htm#07)"
+}
+// NewBotAlexa returns full user-agent string of alexa.
+func NewBotAlexa() string {
+	return "ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)"
+}
 // NewBotMj12 returns full user-agent string of mj12.
 func NewBotMj12() string {
 	return "Mozilla/5.0 (compatible; MJ12bot/v1.4.5; http://www.majestic12.co.uk/bot.php)"
 }
-
 // NewBotBlex returns full user-agent string of blex.
 func NewBotBlex() string {
 	return "Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)"
 }
-
+// NewBotYandex returns full user-agent string of yandex.
+func NewBotYandex() string {
+	return "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)"
+}
+// NewBotMsn returns full user-agent string of msn.
+func NewBotMsn() string {
+	return "msnbot/2.0b (+http://search.msn.com/msnbot.htm)"
+}
+// NewBotGoogle returns full user-agent string of google.
+func NewBotGoogle() string {
+	return "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+}
+// NewBotYahoo returns full user-agent string of yahoo.
+func NewBotYahoo() string {
+	return "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)"
+}
+// NewBotSimplePie returns full user-agent string of simplePie.
+func NewBotSimplePie() string {
+	return "SimplePie/1.3.1 (Feed Parser; http://simplepie.org; Allow like Gecko)"
+}
+// NewBotScoutJet returns full user-agent string of scoutJet.
+func NewBotScoutJet() string {
+	return "Mozilla/5.0 (compatible; ScoutJet; +http://www.scoutjet.com/)"
+}
+// NewBotFacebook returns full user-agent string of facebook.
+func NewBotFacebook() string {
+	return "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"
+}
+// NewBotBing returns full user-agent string of bing.
+func NewBotBing() string {
+	return "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+}
 // NewBotBaidu returns full user-agent string of baidu.
 func NewBotBaidu() string {
 	return "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
 }
-
 // NewBotExa returns full user-agent string of exa.
 func NewBotExa() string {
 	return "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)"
 }
+

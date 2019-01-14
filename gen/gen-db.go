@@ -42,8 +42,7 @@ func init () {
 	{{end}}}
 }
 
-{{range $name, $fullString := . }}
-// NewBot{{$name | FirstToUpper}} returns full user-agent string of {{$name}}.
+{{range $name, $fullString := . }}// NewBot{{$name | FirstToUpper}} returns full user-agent string of {{$name}}.
 func NewBot{{$name | FirstToUpper}}() string {
 	return "{{$fullString}}"
 }
