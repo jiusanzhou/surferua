@@ -1,3 +1,3 @@
-module github.com/jiusanzhou/surferua
+module go.zoe.im/surferua
 
 require gopkg.in/yaml.v2 v2.2.2

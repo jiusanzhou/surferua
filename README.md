@@ -35,7 +35,7 @@ Some example code below:
 package main
 
 import (
-    "github.com/jiusanzhou/surferua"
+    "go.zoe.im/surferua"
 )
 
 fmt.Println(surferua.New().String())

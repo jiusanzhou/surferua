@@ -10,7 +10,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/jiusanzhou/surferua"
+	"go.zoe.im/surferua"
 	"io"
 	"log"
 	"path"
