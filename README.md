@@ -24,7 +24,7 @@ Surfer User-Agent (surferua) is a lightweight Golang package that generate HTTP 
 
 ### Basic usage
 
-- Install this package to your `$GOPATH` with command: `go get github.com/jiusanzhou/surferua`
+- Install this package to your `$GOPATH` with command: `go get go.zoe.im/surferua`
 
 - **Enjoy it!**
 
