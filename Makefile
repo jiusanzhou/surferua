@@ -9,9 +9,8 @@ default: help
 
 getdeps:
 	@echo "Installing golint" && go get -u golang.org/x/lint/golint
-	@echo "Installing gometalinter" && go get -u github.com/alecthomas/gometalinter
 
-verifiers: lint metalinter
+verifiers: lint
 
 gen:
 	@go generate
