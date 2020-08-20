@@ -15,7 +15,8 @@
  */
 
 /*
-Package surferua is a lightweight and high performance Golang package that generate HTTP User-Agent strings with particular attention to device type.
+Package surferua is a lightweight and high performance Golang package that
+generate HTTP User-Agent strings with particular attention to device type.
 
 For a full guide visit https://github.com/jiusanzhou/surferua
 */

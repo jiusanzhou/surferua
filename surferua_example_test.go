@@ -34,4 +34,7 @@ func ExampleNew() {
 	fmt.Println(surferua.New().Phone().String())
 	fmt.Println(surferua.New().Android().String())
 	fmt.Println(surferua.New().Desktop().Chrome().String())
+
+	// new function from v0.2
+	// fmt.Println(surferua.New(Browser("Chrome", "50"), "Android"))
 }
