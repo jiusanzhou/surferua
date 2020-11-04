@@ -55,9 +55,9 @@ func main() {
 
 ### Add more UA
 
-- `cd gen` and open `data.yml` with your editor.
+- Open the `config.yml` with any editor you like.
+- Edit the c`yaml` file as you can image what it do
 
-- Edit the yml as you can image what it do
 ```yaml
 # You can get all User-Agent from: http://www.webapps-online.com/online-tools/user-agent-strings
 # If you want to add UA of some version or change them,
