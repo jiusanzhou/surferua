@@ -24,7 +24,7 @@ Surfer User-Agent (surferua) is a lightweight Golang package that generate HTTP 
 
 ### Basic usage
 
-- Install this package to your `$GOPATH` with command: `go get go.zoe.im/surferua`
+- Install with Go: `go get go.zoe.im/surferua`
 
 - **Enjoy it!**
 
@@ -35,9 +35,9 @@ Some example code below:
 package main
 
 import (
-	"go.zoe.im/surferua"
+  "fmt"
 
-	"fmt"
+	"go.zoe.im/surferua"
 )
 
 func main() {
@@ -53,7 +53,7 @@ func main() {
 }
 ```
 
-### Add more UA
+### Customize the User-Agent database
 
 - Open the `config.yml` with any editor you like.
 - Edit the c`yaml` file as you can image what it do
