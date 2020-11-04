@@ -6,7 +6,8 @@ import (
 	"time"
 )
 
-//go:generate go run gen/gen-db.go gen/data.yml
+//go:generate go run ./hack/gen.go config.yml
+//go:generate go fmt -w -s
 
 func init() {
 	Seed(time.Now().UnixNano())
