@@ -35,7 +35,7 @@ Some example code below:
 package main
 
 import (
-  "fmt"
+	"fmt"
 
 	"go.zoe.im/surferua"
 )
